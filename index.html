@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To DO APP </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li onclick="selectCategory('Coding')">
+            <i class="fa-solid fa-laptop-code" style="color: black;"></i> Coding
+          </li>
+          <li onclick="selectCategory('Personal')">
+            <i class="fa-solid fa-person" style="color: #FFD43B;"></i>Personal
+          </li>
+          <li onclick="selectCategory('Health')">
+            <i class="fa-solid fa-file-medical" style="color: burlywood;"></i>Health
+          </li>
+          <li onclick="selectCategory('Work')">
+            <i class="fa-solid fa-briefcase" style="color: brown"></i> Work
+          </li>
+          <li onclick="selectCategory('Study')">
+            <i class="fa-solid fa-graduation-cap" style="color: rgb(68, 38, 38);"></i> Study
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <h1 id="selected-category"></h1>
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Write your task here..."
+        />
+        <div class="button-container">
+          <button id="add-task" class="button" onclick="addTask()">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button id="remove-task" class="button" onclick="removeTask()">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+        <div class="list">
+          <ul id="task-list" style="display: none"></ul>
+          <!-- <button class="clear">Clear</button> -->
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
